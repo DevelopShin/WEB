@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(148, 147, 147);
+}
+#grid {
+    display: grid;
+    grid-template-columns: 300px 1fr; 
+
+}
+
+.body_contents {
+    margin-top: 40px;
+}
+
+div.nav_bar{
+    border-right: 2px solid black;
+    width: 200px;
+    padding: 20px;
+    margin: center;
+    font-size: 20px;
+}
+
+
+
+div.nav_list{
+
+    padding-left: 30px;
+
+}
+
+
+
+p {
+    color:rgb(233, 158, 158)
+}
+
+button:hover{
+    color:rgb(123, 255, 0)
+}
+
+a[href^="http"] {
+    color:rgb(197, 135, 222);
+}
+
+
+a[href$=".html"] {
+    text-decoration: none
+}
+
+a:hover{
+    color: red
+}
+a:visited{
+    
+}
+
+
+
+
+.title {
+    color:blue;
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 3px solid black;
+
+    /* margin-right: 10%;
+    margin-left: 10%; */
+    /* margin-bottom: 50px; */
+}
+
+.web_title {
+    padding:10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
