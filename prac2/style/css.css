@@ -1,0 +1,95 @@
+
+html,body{ margin:0;padding:0;}
+#header{
+    border: 2px solid #292a2d;
+    background-color: #292a2d;
+    text-align: center;
+    font-weight: bold;
+    color: darkblue;
+    font-size: 30px;
+}
+header h1{
+    display: inline-block;
+    margin: 10px;
+    margin-bottom: 15;
+}
+
+
+#nav_bar{
+
+    background-color: rgb(116, 112, 112);
+    color:rgb(63, 8, 192);
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+
+}
+.nav_ul{
+    background-color: blueviolet;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+nav > ul > li{
+    display: inline-block;
+    margin: 2px;
+    padding: auto;
+    background-color: rgb(108, 108, 202);
+}
+
+
+
+
+
+
+#main{
+    max-width: 1264px;
+    min-height: 1500;
+    border: solid 2px blue;
+    background-color: rgb(174, 240, 209);
+    overflow: hidden;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+#article{
+    border: solid 1px black;
+    float: left;
+    padding-left: 30px;
+    min-width: 940px;
+}
+
+article section{
+    padding: 0;
+    list-style-type: none;
+    /* display: inline-block; */
+    align-items: center;
+}
+
+#side_banner{
+    background-color: rgb(197, 235, 199);
+    color:rgb(63, 8, 192);
+    font-size: 1.2rem;
+    font-weight: bold;
+    float: right;
+}
+
+
+#footer{
+    text-align: center;
+    color: blanchedalmond;
+    background-color: rgb(54, 54, 54);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+img {
+    width: 300px;
+    height: 150px;
+    object-fit: scale-down;
+  }
