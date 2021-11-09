@@ -1,12 +1,12 @@
-body{
+body, html{
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
 }
 a {text-decoration:none}
 
-header {
+.header {
     width: 100%;
-    margin: 0;
+    margin-top: 0;
 }
 a:hover{
     color: red;
@@ -16,7 +16,7 @@ a:hover{
 
     overflow: hidden;
     background-color: #2d1152;
-    max-width: 1264px;
+    max-width: 1300px;
     min-width: 975px;
     height: 30px;
     padding-top:10px;
@@ -43,8 +43,11 @@ a:hover{
 
 
 #header_info{
-    width: 1100px;
-    margin: 0 auto;
+    max-width: 1264px;
+    min-width: 1000px;
+    height: 70px;
+    margin: 7px auto;
+    border-bottom: solid 3px rgb(0, 0, 0);
 }
 
 #header_info li{
@@ -53,7 +56,7 @@ a:hover{
     font-weight: bold;
     margin-left: 10px;
     float: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: blue;
 
 }
@@ -66,27 +69,107 @@ ul{
     float: left;
 }
 
-.search {
+/* .search {
     padding: 0;
     margin: 0;
-}
-.search input{
-    width:300px;height: 38px;
-    font-size:20px;
-    border:1px solid #3488d9;
-    margin-top:2px;
-    margin-left: 15px;
-    padding:4px;
-}
+} */
 
-.btn_search{
-    height: 48px; width: 100px;
-    margin-bottom: 10px;
-}
 
 #header_info .service {
     margin-top: 22px;
     float:right;
 }
 
+#main_nav li{
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+}
+
+#main_nav {
+    margin-top: 50px;
+}
+
+#content {
+    display: flex;
+}
+
+#main {
+    margin: 10px;
+}
+
+#content #main div {
+    border:1px solid #cccccc;
+    height: 590px;
+    margin-bottom: 5px;
+}
+
+
+
+#content #main div:nth-child(3) {
+    width:590px; height:50px;
+    background-color:#500095;
+}
+
+#main ul {
+    list-style: none;
+    display: flex;
+    color: rgb(255, 255, 255);
+    padding-top: 7px;
+    justify-content: center;
+
+}
+
+#main ul li{
+    padding: 10px;
+}
+
+#main_banner div{
+    border: solid 1px #cccccc;
+    height: 120px;
+    width: 220px;
+    margin: 5px;
+}
+
+
+#header_info .search input {
+    width:400px;
+    font-size:20px;
+    border:1px solid #3488d9;
+    margin-top:6px;
+    padding:5px;
+}
+ 
+#header_info .search button{
+    display:inline-block 
+}
+
+
+search input{
+    width:300px;height: 38px;
+    font-size:20px;
+    border:1px solid #3488d9;
+    margin-top:6px;
+    margin-left: 15px;
+}
+
+#header_info .btn_search{
+    display: block;
+    margin-left: 10px;
+    height: 35px; width: 100px;
+    align-items: center;
+    /* padding-top: 0; */
+
+    background: url('.search_btn.png') no-repeat;
+}
+
+
+
+
+/* #header_info .txt_sw {
+    color:#ffffff;
+    font-size:1.2em;
+} */
