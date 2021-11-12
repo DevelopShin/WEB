@@ -52,7 +52,6 @@ function App() {
           </div>
 
           <Modal>dk</Modal>
-
         </article>
 
 
@@ -72,6 +71,7 @@ function Modal(){
   </div>
   )
 }
+
 export default App;
 
 // https://www.youtube.com/watch?v=Qb8Oiy8i9IY
