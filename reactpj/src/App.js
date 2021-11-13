@@ -22,7 +22,7 @@ class App extends React.Component {
         <div>
           <h1>{this.props.test}</h1>
         </div>
-        <PersonInfo name={person[1].name} age={person[1].age} myFun={myName}>
+        <PersonInfo name={person[0].name} age={person[3].age} st={this.state}>
           <h2 className='child'>안녕하쇼!</h2>
         </PersonInfo>
       </div>
