@@ -1,38 +1,36 @@
-import './App.css';
-import React, {Component} from 'react';
+import './css/App.css';
+import React, {Component, useState} from 'react';
 import Display from './Compononts/Display';
 import Button from './Compononts/Button';
-import TestDiv from './Compononts/test';
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state={  number:0 }
-    // this.onClickHandler = this.onClickHandler.bind(this)/
+function App() {
+
+  let [num, setNum]=useState(0);
+  const [text, setText] = useState("");
+  const onChange = (e) =>{
+    setText(e.target.value)
   }
-
-  onClickHandler=(num)=> {
-    this.setState({number:this.state.number+num}) //bind, err handler
-  }
-
-  render() {
-    const Num = this.state.number
-    return (
-      <div className="App">
-        <header className="App-header">
-          <div>
-            <Display value={Num}/>
-            </div>
-            <div className="btnClass">
-              <Button clickHandler={()=>this.onClickHandler(1)} > 증가</Button>
-              <Button clickHandler={()=>this.onClickHandler(-1)} > 감소</Button>
+  return (
+    <div className="App">
+      <header className="App-header">
+        <div>
+          <Display value={num}/>
           </div>
+          <div className="btnClass">
+            <Button clickHandler= {()=>{setNum(num+1)}} > 중가 </Button>
+            <Button clickHandler= {()=>{setNum(num-1)}} > 감소 </Button>
+  
+        </div>
 
-        </header>
-      </div>
-    );
+        <div>
+          <input type="text" onChange={onChange} value={text}></input>
+          <div>{text} </div>
+        </div>
+      </header>
+    </div>
+  );
   }
-  }
+
 
 
 export default App;
