@@ -22,12 +22,12 @@ class App extends Component {
         <header className="App-header">
           <div>
             <Display value={Num}/>
-            <Button clickHandler={()=>this.onClickHandler(1)} > 증가</Button>
-            <Button clickHandler={()=>this.onClickHandler(-1)} > 감소</Button>
+            </div>
+            <div className="btnClass">
+              <Button clickHandler={()=>this.onClickHandler(1)} > 증가</Button>
+              <Button clickHandler={()=>this.onClickHandler(-1)} > 감소</Button>
           </div>
-          <div>
-            <TestDiv />
-          </div>
+
         </header>
       </div>
     );

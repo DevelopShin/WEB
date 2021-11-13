@@ -14,5 +14,23 @@
 }
 
 .disp {
+  height: 100px;
+  width: 300px;
+  line-height: 100px;
+  background: #3e434b;
+  border-radius: 15px;
+  font-size: 40px;
+}
+
+.btn {
+  display: inline-block;
+}
+
+.btn-1 {
+  background-color: rgb(148, 143, 196);
+  width: 130px; height: 40px;
+  margin: 10px;
+  border-radius: 5px;
+  
 
 }
