@@ -26,6 +26,7 @@ function App() {
           <input type="text" onChange={onChange} value={text}></input>
           <div>{text} </div>
         </div>
+        
       </header>
     </div>
   );
