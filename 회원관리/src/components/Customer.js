@@ -1,47 +1,54 @@
 import React,{Component} from "react";
-
+import { TableRow } from "@mui/material";
+import { TableCell } from "@mui/material";
 
 class Customer extends React.Component{
     render() {
         const props = this.props
         return(
-        <div>
-            <CustomerProfile image={props.image} name={props.name} id={props.id} />
-            <CustomerInfo job={props.job} gender={props.gender} age={props.age}/>
-        </div>
+            <TableRow>
+                <TableCell> {props.id} </TableCell>         
+                <TableCell> <img src={props.image} /></TableCell>
+                <TableCell> {props.name} </TableCell>
+                <TableCell> {props.age} </TableCell> 
+                <TableCell> {props.gender} </TableCell>         
+                <TableCell> {props.job} </TableCell>         
+            </TableRow>
         )
     }
 }
 
-class CustomerProfile extends React.Component{
-    render() {
-        const props = this.props
-        return(
-            <div>
-                <div>
-                    <img src={props.image} />
-                </div>
-                <h3>({props.id}) {props.name}</h3>
+
+
+// class CustomerProfile extends React.Component{
+//     render() {
+//         const props = this.props
+//         return(
+//             <div>
+//                 <div>
+//                     <img src={props.image} />
+//                 </div>
+//                 <h3>({props.id}) {props.name}</h3>
 
                 
-            </div>
+//             </div>
 
-        )
-    }
-}
+//         )
+//     }
+// }
 
-class CustomerInfo extends React.Component{
-    render() {
-        const props = this.props
-        return(
-        <div>
-            <p>{props.job}</p>
-            <p>{props.gender}</p>
-            <p>{props.age}</p>
-        </div>
-        )
-    }
-}
+// class CustomerInfo extends React.Component{
+//     render() {
+//         const props = this.props
+//         return(
+//         <div>
+//             <p>{props.job}</p>
+//             <p>{props.gender}</p>
+//             <p>{props.age}</p>
+//         </div>
+//         )
+//     }
+// }
 
 
 
