@@ -2,7 +2,7 @@ import React,{Component} from "react";
 import { TableRow } from "@mui/material";
 import { TableCell } from "@mui/material";
 
-class Customer extends React.Component{
+class Customer extends Component{
     render() {
         const props = this.props
         return(

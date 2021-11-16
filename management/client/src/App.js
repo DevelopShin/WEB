@@ -1,6 +1,6 @@
 import React from "react";
 import Customer from "./components/Customer";
-import "./App.css"
+import "./css/App.css"
 import { Table } from "@mui/material";
 import { TableHead } from "@mui/material";
 import { TableBody } from "@mui/material"; import { withStyles } from "@mui/styles";
@@ -26,31 +26,24 @@ const styles = theme => ({
       
 })
 
-const customers = [{
-      id: 1,
-      image: 'https://placeimg.com/64/64/1',
-      name: 'shin-kim',
-      age: '112112',
-      gender: 'male',
-      job: 'SamSung'
-},
-{
-      id: 2,
-      image: 'https://placeimg.com/64/64/2',
-      name: 'sung-kim', age: '2212333',
-      gender: 'female', job: 'LG'
-},
-{
-      id: 3,
-      image: 'https://placeimg.com/64/64/3',
-      name: 'pang-kim', age: '3322332',
-      gender: 'female', job: 'Kia'
-},
-
-
-]
 
 class App extends React.Component {
+      state = {
+            customers: " "
+      }
+      componentDidMount(){
+            this.callApi()
+            .then(res => this.setState({customers: res}))
+            .catch(err => console.log("에러코드: ",err));
+      }
+
+      callApi = async () => {
+            const response = await fetch('/api/customers');
+            const body = await response.json();
+            return body;
+      }
+
+
       render() {
             const {classes} = this.props;
             return (
@@ -72,14 +65,15 @@ class App extends React.Component {
                               </TableHead>
 
                               <TableBody>
-                                    {customers.map(c => {
+                                    {this.state.customers ? this.state.customers.map(c => {
                                           return (<Customer key={c.id} id={c.id} name={c.name}
                                                 job={c.job} image={c.image}
-                                                age={c.age} gender={c.gender} />)
-                                    })}
+                                                age={c.age} gender={c.gender} />);
+                                    }) : ""}
                               </TableBody>
                         </Table>
                         </Paper>
+                        {/* <div>여기도{this.state.customers.name}</div> */}
                   </div>
             )
       }
